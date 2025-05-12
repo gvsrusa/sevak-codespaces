@@ -5,6 +5,9 @@ AgriConnect is a comprehensive mobile application designed to empower farmers by
 ## Project Structure
 
 -   `android_app/`: Contains the Android mobile application source code.
+    -   `gradlew`, `gradlew.bat`: Gradle wrapper scripts for building and managing the Android project.
+    -   `gradle/wrapper/gradle-wrapper.jar`: The Gradle wrapper JAR.
+    -   `gradle/wrapper/gradle-wrapper.properties`: Gradle wrapper configuration.
 -   `supabase/`: Contains the Supabase backend configuration, database migrations, and edge functions.
     -   `supabase/migrations/`: Database schema migrations.
     -   `supabase/functions/`: Serverless edge functions.
@@ -16,7 +19,7 @@ AgriConnect is a comprehensive mobile application designed to empower farmers by
 
 1.  Ensure you have Android Studio installed.
 2.  Open the `AgriConnect/android_app` directory as a project in Android Studio.
-3.  Let Gradle sync and download dependencies.
+3.  The project uses the Gradle wrapper. Android Studio should automatically use it to sync and download dependencies. If building from the command line, use `./gradlew` (on Linux/macOS) or `gradlew.bat` (on Windows) for Gradle tasks (e.g., `./gradlew assembleDebug`).
 4.  Configure any necessary API keys or environment variables as per the application's requirements (e.g., Supabase URL and Anon Key in a configuration file).
 5.  Build and run the application on an emulator or a physical device.
 
