@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt) // Re-adding with root declaration
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
 }
@@ -103,6 +104,3 @@ dependencies {
 // Since Hilt and Room are using KSP (as seen with 'ksp(libs.hilt.compiler)' and 'ksp(libs.androidx.room.compiler)'),
 // the kapt block might not be strictly necessary if all annotation processing is via KSP.
 // However, leaving it as is unless issues arise or a full migration to KSP for all processors is confirmed.
-kapt {
-    correctErrorTypes = true
-}

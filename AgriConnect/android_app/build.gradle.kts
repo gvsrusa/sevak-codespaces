@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.jvm) apply false // If you have pure Kotlin modules
     alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.kotlin.kapt) apply false
 }
 
 buildscript {
@@ -13,13 +14,6 @@ buildscript {
     }
     dependencies {
         // Define versions in libs.versions.toml
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
     }
 }
 

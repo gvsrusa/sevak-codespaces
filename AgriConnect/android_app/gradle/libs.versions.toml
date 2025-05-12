@@ -16,6 +16,10 @@ lifecycleViewmodelKtx = "2.8.2"
 navigationCompose = "2.7.7"
 hiltNavigationCompose = "1.2.0"
 hilt = "2.51.1" # Hilt version
+# Testing specific versions
+composeUiTestJunit4 = "1.6.7" # Version for compose.ui.test.junit4
+mockitoCore = "5.11.0" # Version for mockito-core
+# hiltTesting version can reuse 'hilt' version if they are typically aligned
 # Supabase specific versions (if direct Android SDK is used, otherwise handled by backend)
 # supabaseClient = "X.Y.Z"
 
@@ -54,6 +58,12 @@ hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 
+# Testing Libraries
+androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "composeUiTestJunit4" }
+androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" } # Often versionless, tied to BOM
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockitoCore" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+
 
 # Supabase (Example, if using Supabase Kotlin client directly)
 # supabase-bom = { group = "io.supabase", name = "supabase-bom", version.ref = "supabaseClient" }
@@ -69,6 +79,7 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 
 [bundles]
 compose = ["androidx-compose-ui", "androidx-compose-ui-graphics", "androidx-compose-ui-tooling-preview", "androidx-compose-material3"]
